@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cs0the1ffidqi"]
+
+[ext_resource type="PackedScene" uid="uid://bx8uyqbbhpcn8" path="res://palette/monster.tscn" id="1_ggit8"]
+[ext_resource type="Texture2D" uid="uid://b86lmjilemr1e" path="res://static_assets/props.png" id="2_gfb1x"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jbo1x"]
+radius = 8.06226
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6to3l"]
+atlas = ExtResource("2_gfb1x")
+region = Rect2(64, 80, 32, 16)
+
+[node name="MonsterElite" instance=ExtResource("1_ggit8")]
+max_health = 3000
+damage = 15
+
+[node name="CollisionShape2D" parent="AtkBox" index="0"]
+shape = SubResource("CircleShape2D_jbo1x")
+
+[node name="Sprite2D" parent="." index="5"]
+texture = SubResource("AtlasTexture_6to3l")

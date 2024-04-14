@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1mct1fd6aw0l"]
+
+[ext_resource type="PackedScene" uid="uid://bx8uyqbbhpcn8" path="res://palette/monster.tscn" id="1_3kvah"]
+[ext_resource type="Texture2D" uid="uid://b86lmjilemr1e" path="res://static_assets/props.png" id="2_okcsg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jhrl5"]
+radius = 8.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_huesq"]
+atlas = ExtResource("2_okcsg")
+region = Rect2(96, 64, 32, 16)
+
+[node name="MonsterHeavyGuardian" instance=ExtResource("1_3kvah")]
+max_health = 1500
+speed = 6.0
+enable_guardian_mode = true
+
+[node name="CollisionShape2D" parent="AtkBox" index="0"]
+shape = SubResource("CircleShape2D_jhrl5")
+
+[node name="Sprite2D" parent="." index="5"]
+texture = SubResource("AtlasTexture_huesq")

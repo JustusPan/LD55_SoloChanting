@@ -1,0 +1,143 @@
+[gd_scene load_steps=15 format=3 uid="uid://bx8uyqbbhpcn8"]
+
+[ext_resource type="Script" path="res://Monster.gd" id="1_q28hp"]
+[ext_resource type="PackedScene" uid="uid://mxdjpvrgcduq" path="res://static_assets/monster_death_explosion.tscn" id="2_4agbt"]
+[ext_resource type="Texture2D" uid="uid://b86lmjilemr1e" path="res://static_assets/props.png" id="3_n0jx4"]
+[ext_resource type="AudioStream" uid="uid://bgywbjwqhmh37" path="res://static_assets/sounds/Hit_Hurt68_n30.wav" id="4_xjynl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vqxfh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n47so"]
+bg_color = Color(1, 0.0823529, 0.223529, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yoii2"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_snyu6"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5d61m"]
+radius = 96.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q7kxv"]
+radius = 24.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kic87"]
+atlas = ExtResource("3_n0jx4")
+region = Rect2(64, 48, 32, 16)
+
+[sub_resource type="Animation" id="Animation_4l8pa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_mb7cn"]
+resource_name = "default"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b3oo5"]
+_data = {
+"RESET": SubResource("Animation_4l8pa"),
+"default": SubResource("Animation_mb7cn")
+}
+
+[node name="Monster" type="CharacterBody2D" groups=["Monster"]]
+texture_filter = 1
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_q28hp")
+speed = 24.0
+death_vfx = ExtResource("2_4agbt")
+metadata/_edit_group_ = true
+
+[node name="HPBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+z_index = 1
+texture_filter = 1
+custom_minimum_size = Vector2(8, 1)
+offset_left = -4.0
+offset_top = -9.0
+offset_right = 4.0
+offset_bottom = -8.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_vqxfh")
+theme_override_styles/fill = SubResource("StyleBoxFlat_n47so")
+value = 53.7
+show_percentage = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yoii2")
+
+[node name="AtkBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 458753
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AtkBox"]
+shape = SubResource("CircleShape2D_snyu6")
+
+[node name="ZakoBDetector" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 131072
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZakoBDetector"]
+visible = false
+shape = SubResource("CircleShape2D_5d61m")
+
+[node name="OtherTargetDetector" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 65537
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OtherTargetDetector"]
+visible = false
+shape = SubResource("CircleShape2D_q7kxv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.729412, 0, 0.207843, 1)
+texture = SubResource("AtlasTexture_kic87")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_b3oo5")
+}
+autoplay = "default"
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+unique_name_in_owner = true
+collision_mask = 4
+
+[node name="HurtSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_xjynl")

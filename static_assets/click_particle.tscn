@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://66j2t727ea28"]
+
+[ext_resource type="Texture2D" uid="uid://c8y0s2emxmrkx" path="res://static_assets/click_particle.png" id="1_3pqwt"]
+[ext_resource type="Script" path="res://static_assets/click_particle.gd" id="2_vtpd8"]
+
+[sub_resource type="Curve" id="Curve_lutce"]
+max_value = 2.0
+_data = [Vector2(0, 0), 0.0, 0.645846, 0, 0, Vector2(1, 2), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_sk1sk"]
+offsets = PackedFloat32Array(0, 0.420428, 0.644893, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0)
+
+[node name="ClickParticle" type="CPUParticles2D"]
+z_index = 10
+texture_filter = 1
+emitting = false
+amount = 1
+lifetime = 0.5
+one_shot = true
+fixed_fps = 30
+texture = ExtResource("1_3pqwt")
+gravity = Vector2(0, 0)
+scale_amount_curve = SubResource("Curve_lutce")
+color_ramp = SubResource("Gradient_sk1sk")
+script = ExtResource("2_vtpd8")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

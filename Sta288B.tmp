@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://hhmx7smyp3hu"]
+
+[ext_resource type="PackedScene" uid="uid://dwhjp3diumals" path="res://player.tscn" id="1_r18n6"]
+[ext_resource type="PackedScene" uid="uid://bbg4gdgvn4eq7" path="res://game_mgr.tscn" id="1_xsk6y"]
+[ext_resource type="PackedScene" uid="uid://bx8uyqbbhpcn8" path="res://monster.tscn" id="3_dufe6"]
+
+[node name="Stage1" type="Node2D"]
+texture_filter = 1
+
+[node name="GameMgr" parent="." instance=ExtResource("1_xsk6y")]
+
+[node name="Player" parent="." instance=ExtResource("1_r18n6")]
+position = Vector2(235, 19)
+
+[node name="Monster" parent="." instance=ExtResource("3_dufe6")]
+position = Vector2(71, 84)

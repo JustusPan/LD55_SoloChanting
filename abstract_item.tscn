@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://85gen1ivwsvg"]
+
+[ext_resource type="Script" path="res://item.gd" id="1_20b3r"]
+[ext_resource type="Texture2D" uid="uid://b86lmjilemr1e" path="res://static_assets/props.png" id="1_yuqwe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_so5is"]
+radius = 5.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fi45m"]
+atlas = ExtResource("1_yuqwe")
+region = Rect2(32, 0, 32, 48)
+
+[node name="Item" type="StaticBody2D"]
+texture_filter = 1
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_20b3r")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_so5is")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_fi45m")
+hframes = 2
+vframes = 3
+frame = 1

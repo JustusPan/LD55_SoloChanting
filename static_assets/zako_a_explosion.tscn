@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2ejhnxucxi1n"]
+
+[ext_resource type="Script" path="res://static_assets/particle_on_finished.gd" id="1_7mlqj"]
+
+[sub_resource type="Gradient" id="Gradient_0me74"]
+offsets = PackedFloat32Array(0, 0.433492, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0)
+
+[node name="ZakoAExplosion" type="CPUParticles2D"]
+z_index = 10
+scale = Vector2(2, 2)
+emitting = false
+amount = 4
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.57
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 18.5
+initial_velocity_max = 18.5
+damping_min = 57.768
+damping_max = 62.144
+color = Color(0.00392157, 0.933333, 0.0901961, 1)
+color_ramp = SubResource("Gradient_0me74")
+script = ExtResource("1_7mlqj")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

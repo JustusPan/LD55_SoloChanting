@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7hqrcllpaox7"]
+
+[ext_resource type="PackedScene" uid="uid://btfyawnqh2dhh" path="res://zako.tscn" id="1_88fbw"]
+[ext_resource type="PackedScene" uid="uid://d2ejhnxucxi1n" path="res://static_assets/zako_a_explosion.tscn" id="2_8lhba"]
+[ext_resource type="Texture2D" uid="uid://b86lmjilemr1e" path="res://static_assets/props.png" id="3_7djyg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ov0ru"]
+radius = 24.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1v4x"]
+atlas = ExtResource("3_7djyg")
+region = Rect2(64, 0, 32, 16)
+
+[node name="ZakoA" groups=["ZakoA"] instance=ExtResource("1_88fbw")]
+debug_name = "ZakoA"
+max_health = 110
+speed = 24.0
+death_vfx = ExtResource("2_8lhba")
+
+[node name="CollisionShape2D" parent="TargetDetector" index="0"]
+shape = SubResource("CircleShape2D_ov0ru")
+
+[node name="Sprite2D" parent="." index="4"]
+texture = SubResource("AtlasTexture_c1v4x")
+
+[node name="CloseBodyDetector" parent="." index="5"]
+monitoring = false
+monitorable = false

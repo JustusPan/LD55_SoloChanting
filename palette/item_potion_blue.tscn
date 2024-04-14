@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2eejhop3qjt2"]
+
+[ext_resource type="PackedScene" uid="uid://85gen1ivwsvg" path="res://abstract_item.tscn" id="1_q8cmr"]
+
+[node name="ItemPotionBlue" instance=ExtResource("1_q8cmr")]
+item_type = 1
+
+[node name="Sprite2D" parent="." index="1"]
+frame = 3

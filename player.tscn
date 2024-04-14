@@ -1,0 +1,114 @@
+[gd_scene load_steps=11 format=3 uid="uid://dwhjp3diumals"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_ua58a"]
+[ext_resource type="Texture2D" uid="uid://b86lmjilemr1e" path="res://static_assets/props.png" id="2_b5qox"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k1b1u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5srqe"]
+bg_color = Color(0.0313726, 0.839216, 0.105882, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sysue"]
+radius = 3.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vaggs"]
+atlas = ExtResource("2_b5qox")
+region = Rect2(96, 0, 32, 16)
+
+[sub_resource type="Animation" id="Animation_ka0c6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_sndil"]
+resource_name = "default"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jdmwg"]
+_data = {
+"RESET": SubResource("Animation_ka0c6"),
+"default": SubResource("Animation_sndil")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0rruo"]
+radius = 7.0
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+texture_filter = 1
+collision_mask = 4
+script = ExtResource("1_ua58a")
+speed = 48.0
+slowdown_speed_scale = 0.3
+metadata/_edit_group_ = true
+
+[node name="HPBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+z_index = 3
+texture_filter = 1
+custom_minimum_size = Vector2(16, 1)
+offset_left = -8.0
+offset_top = -9.0
+offset_right = 8.0
+offset_bottom = -8.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_k1b1u")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5srqe")
+value = 53.7
+show_percentage = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_sysue")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_vaggs")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_jdmwg")
+}
+autoplay = "default"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="InteractArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
+shape = SubResource("CircleShape2D_0rruo")
+
+[node name="SlowdownTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.5
+
+[connection signal="body_entered" from="InteractArea" to="." method="_on_interact_area_body_entered"]
+[connection signal="timeout" from="SlowdownTimer" to="." method="_on_slowdown_timer_timeout"]

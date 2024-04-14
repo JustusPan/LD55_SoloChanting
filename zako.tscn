@@ -1,0 +1,136 @@
+[gd_scene load_steps=14 format=3 uid="uid://btfyawnqh2dhh"]
+
+[ext_resource type="Script" path="res://Zako.gd" id="1_uangj"]
+[ext_resource type="Texture2D" uid="uid://b86lmjilemr1e" path="res://static_assets/props.png" id="2_a4i2d"]
+[ext_resource type="AudioStream" uid="uid://bgywbjwqhmh37" path="res://static_assets/sounds/Hit_Hurt68_n30.wav" id="3_50i6h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pjw4i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bl3dh"]
+bg_color = Color(0, 0.709804, 1, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yoii2"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_snyu6"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yvgfa"]
+radius = 48.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ngmy"]
+atlas = ExtResource("2_a4i2d")
+region = Rect2(64, 0, 32, 16)
+
+[sub_resource type="Animation" id="Animation_c15ha"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_nhh0l"]
+resource_name = "default"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6wg2g"]
+_data = {
+"RESET": SubResource("Animation_c15ha"),
+"default": SubResource("Animation_nhh0l")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dkbhk"]
+radius = 4.0
+
+[node name="Zako" type="CharacterBody2D" groups=["Zako"]]
+texture_filter = 1
+collision_layer = 65536
+collision_mask = 4
+script = ExtResource("1_uangj")
+draw_radius = 24.0
+metadata/_edit_group_ = true
+
+[node name="HPBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+z_index = 2
+texture_filter = 1
+custom_minimum_size = Vector2(8, 1)
+offset_left = -4.0
+offset_top = -9.0
+offset_right = 4.0
+offset_bottom = -8.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_pjw4i")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bl3dh")
+value = 53.7
+show_percentage = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yoii2")
+
+[node name="AtkBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AtkBox"]
+shape = SubResource("CircleShape2D_snyu6")
+
+[node name="TargetDetector" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetDetector"]
+shape = SubResource("CircleShape2D_yvgfa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.247059, 0.878431, 0.584314, 1)
+texture = SubResource("AtlasTexture_5ngmy")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_6wg2g")
+}
+autoplay = "default"
+
+[node name="CloseBodyDetector" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CloseBodyDetector"]
+shape = SubResource("CircleShape2D_dkbhk")
+
+[node name="HurtSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_50i6h")
+
+[connection signal="body_entered" from="CloseBodyDetector" to="." method="_on_close_body_detector_body_entered"]

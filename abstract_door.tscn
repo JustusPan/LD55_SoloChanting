@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1mgd2mtwfqwi"]
+
+[ext_resource type="Script" path="res://door.gd" id="1_ndl7e"]
+[ext_resource type="Texture2D" uid="uid://b86lmjilemr1e" path="res://static_assets/props.png" id="1_w6lnq"]
+[ext_resource type="PackedScene" uid="uid://cvyk2d2koiue7" path="res://static_assets/door_open_vfx.tscn" id="2_for4j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxttn"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4rub"]
+atlas = ExtResource("1_w6lnq")
+region = Rect2(0, 0, 32, 48)
+
+[node name="Door" type="StaticBody2D"]
+texture_filter = 1
+collision_layer = 20
+script = ExtResource("1_ndl7e")
+door_open_vfx = ExtResource("2_for4j")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yxttn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_u4rub")
+hframes = 2
+vframes = 3

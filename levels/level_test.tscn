@@ -1,0 +1,1787 @@
+[gd_scene load_steps=20 format=3 uid="uid://damu5thpjobgn"]
+
+[ext_resource type="Texture2D" uid="uid://dwyd4jqixob2m" path="res://static_assets/Auto47.png" id="1_lm3ck"]
+[ext_resource type="PackedScene" uid="uid://dwhjp3diumals" path="res://player.tscn" id="2_bwrwt"]
+[ext_resource type="PackedScene" uid="uid://dx5kkc2la8eoe" path="res://palette/door_yellow.tscn" id="3_2pj8j"]
+[ext_resource type="PackedScene" uid="uid://bwfyqe2etdar5" path="res://palette/door_normal.tscn" id="3_cdhss"]
+[ext_resource type="PackedScene" uid="uid://dgfh40sk6t5ot" path="res://palette/item_key_yellow.tscn" id="4_beuip"]
+[ext_resource type="PackedScene" uid="uid://bs46vyqou85ar" path="res://palette/item_potion_green.tscn" id="5_xy0gn"]
+[ext_resource type="PackedScene" uid="uid://c2eejhop3qjt2" path="res://palette/item_potion_blue.tscn" id="6_74v4o"]
+[ext_resource type="PackedScene" uid="uid://bx8uyqbbhpcn8" path="res://palette/monster.tscn" id="6_seybe"]
+[ext_resource type="PackedScene" uid="uid://cs085fjr2fhvy" path="res://palette/monster_guardian.tscn" id="7_wxe3g"]
+[ext_resource type="PackedScene" uid="uid://cqrrwmvutdj51" path="res://palette/item_key_blue.tscn" id="8_yth3g"]
+[ext_resource type="PackedScene" uid="uid://d1mct1fd6aw0l" path="res://palette/monster_heavy_guardian.tscn" id="10_6hrvp"]
+[ext_resource type="PackedScene" uid="uid://e85ibpl0d343" path="res://palette/door_blue.tscn" id="11_ch02i"]
+[ext_resource type="PackedScene" uid="uid://jns7n1xufc8h" path="res://palette/item_potion_purple.tscn" id="12_8xpns"]
+[ext_resource type="PackedScene" uid="uid://cv8455ptvbntv" path="res://palette/item_key_red.tscn" id="14_5au4k"]
+[ext_resource type="PackedScene" uid="uid://dmkia3s32k20x" path="res://palette/door_red.tscn" id="15_logj4"]
+[ext_resource type="PackedScene" uid="uid://cs0the1ffidqi" path="res://palette/monster_elite.tscn" id="16_0vrpt"]
+[ext_resource type="PackedScene" uid="uid://bwtikpbxrbdos" path="res://palette/monster_boss.tscn" id="17_4dy5w"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3fi80"]
+texture = ExtResource("1_lm3ck")
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0/terrains_peering_bit/right_side = 0
+1:0/0/terrains_peering_bit/bottom_right_corner = 0
+1:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0/terrains_peering_bit/bottom_left_corner = 0
+1:0/0/terrains_peering_bit/left_side = 0
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0/terrains_peering_bit/bottom_left_corner = 0
+2:0/0/terrains_peering_bit/left_side = 0
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0/terrains_peering_bit/bottom_side = 0
+4:0/0 = 0
+4:0/0/terrain_set = 0
+4:0/0/terrain = 0
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0/terrains_peering_bit/right_side = 0
+4:0/0/terrains_peering_bit/bottom_side = 0
+4:0/0/terrains_peering_bit/bottom_left_corner = 0
+4:0/0/terrains_peering_bit/left_side = 0
+4:0/0/terrains_peering_bit/top_left_corner = 0
+4:0/0/terrains_peering_bit/top_side = 0
+4:0/0/terrains_peering_bit/top_right_corner = 0
+5:0/0 = 0
+5:0/0/terrain_set = 0
+5:0/0/terrain = 0
+5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:0/0/terrains_peering_bit/right_side = 0
+5:0/0/terrains_peering_bit/bottom_right_corner = 0
+5:0/0/terrains_peering_bit/bottom_side = 0
+5:0/0/terrains_peering_bit/left_side = 0
+5:0/0/terrains_peering_bit/top_left_corner = 0
+5:0/0/terrains_peering_bit/top_side = 0
+5:0/0/terrains_peering_bit/top_right_corner = 0
+6:0/0 = 0
+6:0/0/terrain_set = 0
+6:0/0/terrain = 0
+6:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:0/0/physics_layer_0/angular_velocity = 0.0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:0/0/terrains_peering_bit/right_side = 0
+6:0/0/terrains_peering_bit/bottom_right_corner = 0
+6:0/0/terrains_peering_bit/bottom_side = 0
+6:0/0/terrains_peering_bit/bottom_left_corner = 0
+6:0/0/terrains_peering_bit/left_side = 0
+6:0/0/terrains_peering_bit/top_side = 0
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0/terrains_peering_bit/right_side = 0
+0:1/0/terrains_peering_bit/bottom_right_corner = 0
+0:1/0/terrains_peering_bit/bottom_side = 0
+0:1/0/terrains_peering_bit/top_side = 0
+0:1/0/terrains_peering_bit/top_right_corner = 0
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0/terrains_peering_bit/bottom_side = 0
+2:1/0/terrains_peering_bit/bottom_left_corner = 0
+2:1/0/terrains_peering_bit/left_side = 0
+2:1/0/terrains_peering_bit/top_left_corner = 0
+2:1/0/terrains_peering_bit/top_side = 0
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 0
+3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:1/0/physics_layer_0/angular_velocity = 0.0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0/terrains_peering_bit/bottom_side = 0
+3:1/0/terrains_peering_bit/top_side = 0
+4:1/0 = 0
+4:1/0/terrain_set = 0
+4:1/0/terrain = 0
+4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:1/0/physics_layer_0/angular_velocity = 0.0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0/terrains_peering_bit/right_side = 0
+4:1/0/terrains_peering_bit/bottom_right_corner = 0
+4:1/0/terrains_peering_bit/bottom_side = 0
+4:1/0/terrains_peering_bit/bottom_left_corner = 0
+4:1/0/terrains_peering_bit/left_side = 0
+4:1/0/terrains_peering_bit/top_left_corner = 0
+4:1/0/terrains_peering_bit/top_side = 0
+5:1/0 = 0
+5:1/0/terrain_set = 0
+5:1/0/terrain = 0
+5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:1/0/physics_layer_0/angular_velocity = 0.0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0/terrains_peering_bit/right_side = 0
+5:1/0/terrains_peering_bit/bottom_right_corner = 0
+5:1/0/terrains_peering_bit/bottom_side = 0
+5:1/0/terrains_peering_bit/bottom_left_corner = 0
+5:1/0/terrains_peering_bit/left_side = 0
+5:1/0/terrains_peering_bit/top_side = 0
+5:1/0/terrains_peering_bit/top_right_corner = 0
+6:1/0 = 0
+6:1/0/terrain_set = 0
+6:1/0/terrain = 0
+6:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:1/0/physics_layer_0/angular_velocity = 0.0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:1/0/terrains_peering_bit/right_side = 0
+6:1/0/terrains_peering_bit/bottom_right_corner = 0
+6:1/0/terrains_peering_bit/bottom_side = 0
+6:1/0/terrains_peering_bit/left_side = 0
+6:1/0/terrains_peering_bit/top_side = 0
+6:1/0/terrains_peering_bit/top_right_corner = 0
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrain = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0/terrains_peering_bit/right_side = 0
+0:2/0/terrains_peering_bit/top_side = 0
+0:2/0/terrains_peering_bit/top_right_corner = 0
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0/terrains_peering_bit/right_side = 0
+1:2/0/terrains_peering_bit/left_side = 0
+1:2/0/terrains_peering_bit/top_left_corner = 0
+1:2/0/terrains_peering_bit/top_side = 0
+1:2/0/terrains_peering_bit/top_right_corner = 0
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrain = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0/terrains_peering_bit/left_side = 0
+2:2/0/terrains_peering_bit/top_left_corner = 0
+2:2/0/terrains_peering_bit/top_side = 0
+3:2/0 = 0
+3:2/0/terrain_set = 0
+3:2/0/terrain = 0
+3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:2/0/physics_layer_0/angular_velocity = 0.0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0/terrains_peering_bit/top_side = 0
+4:2/0 = 0
+4:2/0/terrain_set = 0
+4:2/0/terrain = 0
+4:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:2/0/physics_layer_0/angular_velocity = 0.0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:2/0/terrains_peering_bit/right_side = 0
+4:2/0/terrains_peering_bit/bottom_side = 0
+4:2/0/terrains_peering_bit/bottom_left_corner = 0
+4:2/0/terrains_peering_bit/left_side = 0
+4:2/0/terrains_peering_bit/top_side = 0
+5:2/0 = 0
+5:2/0/terrain_set = 0
+5:2/0/terrain = 0
+5:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:2/0/physics_layer_0/angular_velocity = 0.0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:2/0/terrains_peering_bit/right_side = 0
+5:2/0/terrains_peering_bit/bottom_side = 0
+5:2/0/terrains_peering_bit/left_side = 0
+5:2/0/terrains_peering_bit/top_side = 0
+5:2/0/terrains_peering_bit/top_right_corner = 0
+6:2/0 = 0
+6:2/0/terrain_set = 0
+6:2/0/terrain = 0
+6:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:2/0/physics_layer_0/angular_velocity = 0.0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:2/0/terrains_peering_bit/right_side = 0
+6:2/0/terrains_peering_bit/bottom_side = 0
+6:2/0/terrains_peering_bit/bottom_left_corner = 0
+6:2/0/terrains_peering_bit/left_side = 0
+6:2/0/terrains_peering_bit/top_left_corner = 0
+6:2/0/terrains_peering_bit/top_side = 0
+0:3/0 = 0
+0:3/0/terrain_set = 0
+0:3/0/terrain = 0
+0:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:3/0/physics_layer_0/angular_velocity = 0.0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0/terrains_peering_bit/right_side = 0
+1:3/0 = 0
+1:3/0/terrain_set = 0
+1:3/0/terrain = 0
+1:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:3/0/physics_layer_0/angular_velocity = 0.0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0/terrains_peering_bit/right_side = 0
+1:3/0/terrains_peering_bit/left_side = 0
+2:3/0 = 0
+2:3/0/terrain_set = 0
+2:3/0/terrain = 0
+2:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:3/0/physics_layer_0/angular_velocity = 0.0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0/terrains_peering_bit/left_side = 0
+3:3/0 = 0
+3:3/0/terrain_set = 0
+3:3/0/terrain = 0
+3:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:3/0/physics_layer_0/angular_velocity = 0.0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:3/0 = 0
+4:3/0/terrain_set = 0
+4:3/0/terrain = 0
+4:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:3/0/physics_layer_0/angular_velocity = 0.0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:3/0/terrains_peering_bit/right_side = 0
+4:3/0/terrains_peering_bit/bottom_side = 0
+4:3/0/terrains_peering_bit/left_side = 0
+4:3/0/terrains_peering_bit/top_left_corner = 0
+4:3/0/terrains_peering_bit/top_side = 0
+5:3/0 = 0
+5:3/0/terrain_set = 0
+5:3/0/terrain = 0
+5:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:3/0/physics_layer_0/angular_velocity = 0.0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:3/0/terrains_peering_bit/right_side = 0
+5:3/0/terrains_peering_bit/bottom_right_corner = 0
+5:3/0/terrains_peering_bit/bottom_side = 0
+5:3/0/terrains_peering_bit/left_side = 0
+5:3/0/terrains_peering_bit/top_side = 0
+6:3/0 = 0
+6:3/0/terrain_set = 0
+6:3/0/terrain = 0
+6:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:3/0/physics_layer_0/angular_velocity = 0.0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:3/0/terrains_peering_bit/right_side = 0
+6:3/0/terrains_peering_bit/bottom_side = 0
+6:3/0/terrains_peering_bit/left_side = 0
+6:3/0/terrains_peering_bit/top_left_corner = 0
+6:3/0/terrains_peering_bit/top_side = 0
+6:3/0/terrains_peering_bit/top_right_corner = 0
+0:4/0 = 0
+0:4/0/terrain_set = 0
+0:4/0/terrain = 0
+0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:4/0/physics_layer_0/angular_velocity = 0.0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:4/0/terrains_peering_bit/right_side = 0
+0:4/0/terrains_peering_bit/bottom_side = 0
+0:4/0/terrains_peering_bit/top_side = 0
+0:4/0/terrains_peering_bit/top_right_corner = 0
+1:4/0 = 0
+1:4/0/terrain_set = 0
+1:4/0/terrain = 0
+1:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:4/0/physics_layer_0/angular_velocity = 0.0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:4/0/terrains_peering_bit/bottom_side = 0
+1:4/0/terrains_peering_bit/left_side = 0
+1:4/0/terrains_peering_bit/top_left_corner = 0
+1:4/0/terrains_peering_bit/top_side = 0
+2:4/0 = 0
+2:4/0/terrain_set = 0
+2:4/0/terrain = 0
+2:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:4/0/physics_layer_0/angular_velocity = 0.0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:4/0/terrains_peering_bit/right_side = 0
+2:4/0/terrains_peering_bit/bottom_side = 0
+2:4/0/terrains_peering_bit/bottom_left_corner = 0
+2:4/0/terrains_peering_bit/left_side = 0
+3:4/0 = 0
+3:4/0/terrain_set = 0
+3:4/0/terrain = 0
+3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:4/0/physics_layer_0/angular_velocity = 0.0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:4/0/terrains_peering_bit/right_side = 0
+3:4/0/terrains_peering_bit/bottom_right_corner = 0
+3:4/0/terrains_peering_bit/bottom_side = 0
+3:4/0/terrains_peering_bit/left_side = 0
+4:4/0 = 0
+4:4/0/terrain_set = 0
+4:4/0/terrain = 0
+4:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:4/0/physics_layer_0/angular_velocity = 0.0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:4/0/terrains_peering_bit/right_side = 0
+4:4/0/terrains_peering_bit/bottom_side = 0
+5:4/0 = 0
+5:4/0/terrain_set = 0
+5:4/0/terrain = 0
+5:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:4/0/physics_layer_0/angular_velocity = 0.0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:4/0/terrains_peering_bit/right_side = 0
+5:4/0/terrains_peering_bit/bottom_side = 0
+5:4/0/terrains_peering_bit/left_side = 0
+6:4/0 = 0
+6:4/0/terrain_set = 0
+6:4/0/terrain = 0
+6:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:4/0/physics_layer_0/angular_velocity = 0.0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:4/0/terrains_peering_bit/bottom_side = 0
+6:4/0/terrains_peering_bit/left_side = 0
+0:5/0 = 0
+0:5/0/terrain_set = 0
+0:5/0/terrain = 0
+0:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:5/0/physics_layer_0/angular_velocity = 0.0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:5/0/terrains_peering_bit/right_side = 0
+0:5/0/terrains_peering_bit/bottom_right_corner = 0
+0:5/0/terrains_peering_bit/bottom_side = 0
+0:5/0/terrains_peering_bit/top_side = 0
+1:5/0 = 0
+1:5/0/terrain_set = 0
+1:5/0/terrain = 0
+1:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:5/0/physics_layer_0/angular_velocity = 0.0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:5/0/terrains_peering_bit/bottom_side = 0
+1:5/0/terrains_peering_bit/bottom_left_corner = 0
+1:5/0/terrains_peering_bit/left_side = 0
+1:5/0/terrains_peering_bit/top_side = 0
+2:5/0 = 0
+2:5/0/terrain_set = 0
+2:5/0/terrain = 0
+2:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:5/0/physics_layer_0/angular_velocity = 0.0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:5/0/terrains_peering_bit/right_side = 0
+2:5/0/terrains_peering_bit/left_side = 0
+2:5/0/terrains_peering_bit/top_left_corner = 0
+2:5/0/terrains_peering_bit/top_side = 0
+3:5/0 = 0
+3:5/0/terrain_set = 0
+3:5/0/terrain = 0
+3:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:5/0/physics_layer_0/angular_velocity = 0.0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:5/0/terrains_peering_bit/right_side = 0
+3:5/0/terrains_peering_bit/left_side = 0
+3:5/0/terrains_peering_bit/top_side = 0
+3:5/0/terrains_peering_bit/top_right_corner = 0
+4:5/0 = 0
+4:5/0/terrain_set = 0
+4:5/0/terrain = 0
+4:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:5/0/physics_layer_0/angular_velocity = 0.0
+4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:5/0/terrains_peering_bit/right_side = 0
+4:5/0/terrains_peering_bit/bottom_side = 0
+4:5/0/terrains_peering_bit/top_side = 0
+5:5/0 = 0
+5:5/0/terrain_set = 0
+5:5/0/terrain = 0
+5:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:5/0/physics_layer_0/angular_velocity = 0.0
+5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:5/0/terrains_peering_bit/right_side = 0
+5:5/0/terrains_peering_bit/bottom_side = 0
+5:5/0/terrains_peering_bit/left_side = 0
+5:5/0/terrains_peering_bit/top_side = 0
+6:5/0 = 0
+6:5/0/terrain_set = 0
+6:5/0/terrain = 0
+6:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:5/0/physics_layer_0/angular_velocity = 0.0
+6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:5/0/terrains_peering_bit/bottom_side = 0
+6:5/0/terrains_peering_bit/left_side = 0
+6:5/0/terrains_peering_bit/top_side = 0
+2:6/0 = 0
+2:6/0/terrain_set = 0
+2:6/0/terrain = 0
+2:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:6/0/physics_layer_0/angular_velocity = 0.0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:6/0/terrains_peering_bit/right_side = 0
+2:6/0/terrains_peering_bit/bottom_right_corner = 0
+2:6/0/terrains_peering_bit/bottom_side = 0
+2:6/0/terrains_peering_bit/left_side = 0
+2:6/0/terrains_peering_bit/top_left_corner = 0
+2:6/0/terrains_peering_bit/top_side = 0
+3:6/0 = 0
+3:6/0/terrain_set = 0
+3:6/0/terrain = 0
+3:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:6/0/physics_layer_0/angular_velocity = 0.0
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:6/0/terrains_peering_bit/right_side = 0
+3:6/0/terrains_peering_bit/bottom_side = 0
+3:6/0/terrains_peering_bit/bottom_left_corner = 0
+3:6/0/terrains_peering_bit/left_side = 0
+3:6/0/terrains_peering_bit/top_side = 0
+3:6/0/terrains_peering_bit/top_right_corner = 0
+4:6/0 = 0
+4:6/0/terrain_set = 0
+4:6/0/terrain = 0
+4:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:6/0/physics_layer_0/angular_velocity = 0.0
+4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:6/0/terrains_peering_bit/right_side = 0
+4:6/0/terrains_peering_bit/top_side = 0
+5:6/0 = 0
+5:6/0/terrain_set = 0
+5:6/0/terrain = 0
+5:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:6/0/physics_layer_0/angular_velocity = 0.0
+5:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:6/0/terrains_peering_bit/right_side = 0
+5:6/0/terrains_peering_bit/left_side = 0
+5:6/0/terrains_peering_bit/top_side = 0
+6:6/0 = 0
+6:6/0/terrain_set = 0
+6:6/0/terrain = 0
+6:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:6/0/physics_layer_0/angular_velocity = 0.0
+6:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:6/0/terrains_peering_bit/left_side = 0
+6:6/0/terrains_peering_bit/top_side = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0/terrains_peering_bit/right_side = 0
+1:1/0/terrains_peering_bit/bottom_right_corner = 0
+1:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0/terrains_peering_bit/bottom_left_corner = 0
+1:1/0/terrains_peering_bit/left_side = 0
+1:1/0/terrains_peering_bit/top_left_corner = 0
+1:1/0/terrains_peering_bit/top_side = 0
+1:1/0/terrains_peering_bit/top_right_corner = 0
+
+[sub_resource type="TileSet" id="TileSet_4kcgr"]
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 0
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Wall"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+navigation_layer_0/layers = 1
+sources/0 = SubResource("TileSetAtlasSource_3fi80")
+
+[node name="LevelTest" type="TileMap" groups=["LevelRoot"]]
+y_sort_enabled = true
+texture_filter = 1
+tile_set = SubResource("TileSet_4kcgr")
+format = 2
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(1, 327680, 4, 2, 65536, 3, 3, 131072, 3, 5, 0, 3, 6, 65536, 3, 7, 196608, 5, 8, 131072, 5, 9, 131072, 3, 11, 0, 3, 12, 196608, 5, 262144, 65536, 3, 720896, 65536, 3, 720899, 65536, 3, 720898, 65536, 3, 720897, 327680, 4, 720900, 327680, 6, 720901, 65536, 3, 720902, 65536, 3, 720903, 65536, 3, 720904, 327680, 5, 720907, 0, 3, 720905, 131072, 3, 720908, 327680, 2, 720909, 131072, 5, 720910, 65536, 3, 720913, 393216, 6, 720912, 327680, 4, 720911, 65536, 3, 720915, 0, 2, 458760, 393216, 3, 458761, 131072, 2, 458764, 327680, 0, 458765, 393216, 2, 524301, 131072, 1, 589837, 131072, 1, 655373, 131072, 1, 458766, 131072, 3, 655379, 0, 0, 458771, 0, 1, 458772, 393216, 2, 458773, 65536, 3, 262157, 131072, 2, 262156, 65536, 2, 262155, 0, 2, 262153, 131072, 2, 262152, 65536, 2, 196624, 327680, 6, 458769, 393216, 5, 524307, 0, 2, 327687, 196608, 1, 262151, 393216, 3, 262147, 65536, 2, 196611, 65536, 0, 196615, 65536, 0, 393229, 131072, 0, 655368, 196608, 0, 524296, 196608, 2, 524300, 0, 1, 655372, 0, 1, 589836, 0, 1, 393224, 65536, 0, 393225, 131072, 0, 393227, 0, 0, 393228, 65536, 0, 458763, 0, 2, 393223, 0, 5, 458759, 0, 2, 589828, 196608, 1, 524292, 196608, 1, 393220, 196608, 0, 262148, 65536, 2, 196612, 65536, 0, 458756, 196608, 1, 262150, 65536, 2, 262149, 65536, 2, 262146, 65536, 2, 262145, 327680, 2, 327681, 196608, 1, 393217, 196608, 1, 458753, 196608, 1, 524289, 262144, 5, 589825, 393216, 6, 196621, 262144, 2, 196622, 65536, 3, 196623, 65536, 3, 196625, 393216, 4, 393235, 0, 0, 196616, 65536, 0, 196617, 131072, 0, 196619, 0, 0, 196620, 65536, 0, -65528, 131072, 1, -131064, 131072, 1, -131060, 0, 1, -131059, 131072, 1, -65524, 0, 1, -196600, 131072, 1, -262136, 262144, 0, -262135, 131072, 2, -262133, 0, 2, -196596, 0, 1, -262132, 327680, 0, -65523, 393216, 2, -196595, 131072, 1, -262131, 262144, 0, -262137, 65536, 1, -196601, 327680, 0, -131065, 0, 1, -65529, 0, 1, -327673, 65536, 1, -327672, 65536, 1, -327671, 131072, 1, -327669, 0, 1, -327668, 65536, 1, -327667, 65536, 1, 786440, 196608, 1, 851976, 196608, 1, 917512, 196608, 1, 786444, 196608, 1, 917516, 196608, 1, 851980, 196608, 1, 983048, 196608, 1, 1048584, 262144, 5, 983052, 196608, 1, 1048588, 393216, 5, 1048585, 131072, 3, 1048587, 0, 3, 1114120, 196608, 1, 1179656, 196608, 1, 1114124, 196608, 1, 1245192, 393216, 5, 1245196, 196608, 1, 458768, 0, 3, 262161, 196608, 1, 393233, 196608, 1, 327697, 196608, 1, 524305, 196608, 2, 655377, 196608, 0, 196614, 65536, 0, 196613, 65536, 0, 196610, 65536, 0, 196609, 0, 5, -196606, 327680, 6, -262142, 196608, 1, -327678, 196608, 1, -393214, 196608, 1, -393210, 0, 1, -327674, 0, 1, -262138, 0, 1, -196602, 196608, 5, 65537, 196608, 1, 131073, 196608, 1, 0, 0, 3, 65534, 131072, 3, 65533, 327680, 4, 131069, 196608, 1, 196605, 196608, 1, 262141, 196608, 1, 327677, 327680, 5, 327678, 65536, 3, 327679, 65536, 3, 65532, 0, 3, 65530, 131072, 3, 65529, 393216, 2, 131065, 131072, 1, 196601, 131072, 1, 262137, 131072, 1, 327673, 393216, 2, 327675, 65536, 3, 327674, 65536, 3, 327676, 65536, 3, -327684, 196608, 1, -262148, 196608, 1, -196612, 196608, 1, -131076, 262144, 6, -65543, 131072, 1, -7, 131072, 1, -131079, 131072, 4, -262151, 131072, 2, -327687, 131072, 1, -327688, 65536, 1, -327689, 65536, 1, -262153, 65536, 2, -65545, 0, 1, -9, 0, 1, -131081, 0, 0, -131080, 65536, 0, -262152, 65536, 2, -262154, 65536, 2, -262155, 262144, 0, -327690, 65536, 1, -327691, 65536, 1, -131083, 131072, 1, -65547, 131072, 1, -11, 131072, 1, -262156, 0, 1, -327692, 327680, 0, -327693, 65536, 2, -196622, 131072, 3, -327694, 65536, 2, -196619, 131072, 1, -196620, 0, 1, -65544, 65536, 1, -8, 65536, 1, 65527, 0, 1, 196599, 0, 1, 131063, 0, 1, 131064, 65536, 1, 196600, 65536, 1, 65528, 65536, 1, 262136, 65536, 1, 327672, 65536, 1, 262135, 0, 1, 262133, 131072, 1, 262132, 65536, 1, -327695, 0, 4, -196623, 262144, 5, -65551, 196608, 1, -131087, 196608, 1, -15, 196608, 1, 65522, 131072, 0, 65521, 0, 5, 131057, 0, 1, 131058, 131072, 1, 196594, 262144, 1, 196593, 0, 1, 262129, 0, 1, 262130, 65536, 1, 262131, 65536, 1, 327665, 0, 1, 327666, 65536, 1, 327668, 65536, 1, 327667, 65536, 1, 327669, 131072, 1, 327671, 0, 1, -262159, 196608, 1, 65525, 131072, 2, 65524, 0, 2, 196596, 65536, 0, 196595, 65536, 0, 196597, 131072, 0, -131084, 0, 1, -65548, 0, 1, -12, 0, 1, 393209, 65536, 4, 458745, 196608, 1, 655347, 65536, 3, 524281, 196608, 2, 393201, 0, 4, 458737, 196608, 1, 655345, 262144, 6, 655348, 65536, 3, 655349, 65536, 3, 655350, 65536, 3, 655352, 196608, 4, 655351, 65536, 3, 655353, 65536, 0, 655354, 65536, 0, 655355, 65536, 5, 589819, 196608, 1, 524283, 196608, 1, 458747, 196608, 0, 393213, 196608, 1, 458749, 196608, 1, 524285, 196608, 1, 655357, 262144, 6, 655358, 131072, 3, 589821, 196608, 1, 589809, 196608, 1, 524273, 196608, 1, 655346, 65536, 3, 393207, 0, 2, 393208, 65536, 2, 393205, 131072, 2, 393204, 65536, 2, 393203, 65536, 2, 393202, 65536, 2, -131074, 393216, 6, -196608, 262144, 6, 786429, 0, 0, 786430, 131072, 4, 786431, 65536, 3, 589824, 0, 3, 1048573, 0, 2, 786433, 196608, 1, 851969, 196608, 1, 917505, 196608, 1, 1048575, 65536, 3, 983040, 65536, 3, 983041, 393216, 6, 1048574, 131072, 5, 720889, 65536, 1, 851961, 65536, 2, 786425, 65536, 1, 720888, 0, 1, 786424, 0, 1, 851960, 0, 4, 917496, 196608, 1, 851962, 65536, 2, 720890, 65536, 1, 786426, 65536, 1, 983032, 0, 5, 983033, 65536, 0, 983034, 65536, 0, 1048569, 65536, 1, 1048568, 0, 1, 1048570, 65536, 1, 720891, 131072, 1, 786427, 131072, 1, 851963, 131072, 2, 983035, 131072, 0, 1048571, 131072, 1, 1114107, 131072, 1, 1114106, 65536, 1, 1114105, 65536, 1, 851965, 0, 2, 983037, 0, 0, 851966, 131072, 2, 983038, 131072, 0, 655364, 196608, 1, 524290, 131072, 3, 1114104, 0, 1, 1179640, 0, 2, 1179641, 65536, 2, 1179642, 65536, 2, 1179643, 131072, 5, 1179644, 65536, 3, 1179645, 65536, 3, 1179647, 65536, 3, 1179646, 65536, 3, 1114112, 65536, 3, 1114113, 393216, 4, 1179649, 196608, 1, 1245185, 262144, 6, 1245186, 65536, 3, 1245187, 65536, 3, 1245188, 65536, 3, 1245189, 65536, 3, 1245190, 65536, 3, 1245191, 65536, 3, 720916, 262144, 3, 720917, 65536, 3, 720918, 65536, 3, 458774, 65536, 3, 720919, 65536, 3, 458775, 196608, 5, 786448, 196608, 1, 851984, 196608, 1, 917520, 196608, 1, 983056, 262144, 6, 983057, 65536, 3, 983059, 65536, 3, 983058, 65536, 3, 786452, 196608, 1, 851988, 196608, 1, 917524, 196608, 1, 983060, 393216, 6, 131085, 196608, 0, 13, 131072, 2, 196628, 131072, 4, 196629, 65536, 3, 196630, 65536, 3, -65522, 131072, 3, -65520, 196608, 1, 16, 262144, 6, 131088, 196608, 0, -262130, 65536, 2, -262129, 65536, 2, -262128, 65536, 4, -196592, 196608, 1, -131056, 196608, 1, 24, 196608, 5, -262120, 0, 1, -196584, 0, 1, -131048, 0, 1, -65512, 0, 1, 17, 65536, 3, 18, 65536, 3, 19, 131072, 3, 21, 0, 3, 23, 65536, 3, 22, 65536, 3, -327664, 131072, 1, -393200, 131072, 1, -458736, 393216, 2, -458733, 131072, 3, -458734, 65536, 3, -458735, 65536, 3, -458731, 0, 3, -458730, 65536, 3, -458729, 65536, 3, -458728, 393216, 5, -393192, 196608, 1, -327656, 0, 5, -524272, 131072, 1, -589808, 131072, 1, -655344, 131072, 1, -720880, 131072, 1, -786416, 131072, 4, -786415, 65536, 3, -786414, 65536, 3, -786413, 65536, 3, -786412, 65536, 3, -786411, 65536, 3, -786410, 65536, 3, -786409, 65536, 3, -786408, 393216, 4, -720872, 196608, 1, -655336, 196608, 1, -589800, 196608, 1, -524264, 196608, 1, -131078, 131072, 3, -458746, 393216, 1, -458747, 65536, 3, -458748, 65536, 3, -458750, 327680, 4, -458749, 65536, 3, -458751, 65536, 3, -458752, 65536, 3, -393217, 65536, 3, -393218, 65536, 3, -393219, 65536, 3, -393220, 327680, 4, -393222, 65536, 3, -393221, 65536, 3, -393223, 131072, 4, -393224, 65536, 0, -393227, 65536, 0, -393226, 65536, 0, -393225, 65536, 0, -393228, 65536, 0, -393229, 65536, 0, -393230, 65536, 0, -393231, 0, 0, -131075, 65536, 3, -196610, 196608, 0, -262144, 196608, 0, -196607, 65536, 3, -196605, 131072, 3, -196603, 0, 3, 393239, 0, 5, 327703, 196608, 1, 262167, 196608, 1, 196631, 393216, 4, 262164, 131072, 2, 262163, 0, 2, 196627, 0, 0, 393236, 131072, 0, 524308, 131072, 2, 655380, 131072, 0, 720920, 393216, 5, 655384, 196608, 1, 589848, 0, 4, 524312, 0, 1, 458776, 327680, 0, 25, 327680, 0, 65561, 0, 1, 131097, 0, 1, 196633, 0, 2, 1310729, 131072, 0, 1310731, 0, 0, 1310728, 0, 5, 1310732, 65536, 5, 1376265, 131072, 1, 1376267, 0, 1, 1376268, 131072, 1, 1376264, 0, 1, 1441801, 131072, 2, 1441800, 0, 4, 1441803, 0, 2, 1441804, 65536, 4, 1507336, 196608, 1, 1572872, 196608, 1, 1638408, 196608, 1, 1507340, 196608, 1, 1572876, 196608, 1, 1638412, 196608, 1, 1703948, 393216, 5, 1703944, 262144, 5, 1703945, 131072, 3, 1769480, 196608, 1, 1835016, 262144, 6, 1835018, 65536, 3, 1835017, 65536, 3, 1835020, 393216, 6, 1835019, 65536, 3, 1769484, 196608, 1, 1703947, 0, 3, 393240, 65536, 0, 393241, 131072, 0, 196634, 65536, 2, 196636, 131072, 3, 196635, 131072, 5, 458777, 131072, 1, 524313, 131072, 1, 131098, 65536, 1, 131099, 131072, 1, 65563, 131072, 1, 65562, 65536, 1, 26, 65536, 1, 27, 131072, 1, 589849, 131072, 5, 589851, 393216, 6, 589850, 65536, 3, 458781, 196608, 1, 393245, 196608, 0, 524317, 196608, 1, 589853, 196608, 1, 196638, 0, 3, -65508, 131072, 2, -65510, 65536, 1, -65509, 262144, 0, -131044, 131072, 1, -131045, 65536, 1, -131046, 65536, 1, -131042, 0, 1, -65506, 0, 2, -65505, 393216, 3, -131041, 65536, 1, -196577, 327680, 1, -262113, 0, 1, -327649, 0, 1, -327654, 65536, 5, -262118, 131072, 1, -196582, 262144, 1, -327655, 65536, 0, -262119, 65536, 1, -196583, 65536, 1, -131047, 65536, 1, -65511, 65536, 1, 31, 196608, 2, 131103, 0, 0, 196639, 327680, 2, -196580, 131072, 0, -196581, 65536, 0, -196578, 0, 0, -393190, 262144, 4, -393188, 65536, 3, -393189, 65536, 3, -393187, 65536, 3, -393186, 65536, 3, -393185, 196608, 4, 262175, 196608, 1, 327711, 196608, 1, 393247, 262144, 5, 458783, 196608, 2, 393248, 65536, 3, 393250, 65536, 3, 393249, 65536, 3, 393251, 327680, 5, 458787, 196608, 1, 524323, 196608, 1, 589859, 327680, 5, 589855, 0, 3, 589856, 196608, 4, 589858, 65536, 3, 589857, 131072, 4, 393243, 196608, 0, 458779, 196608, 1, 524315, 196608, 1, 655389, 196608, 1, 720925, 196608, 1, 786456, 196608, 1, 851992, 196608, 1, 917528, 196608, 1, 983064, 196608, 1, 1048600, 262144, 6, 1048601, 65536, 3, 1048603, 65536, 3, 786461, 196608, 1, 851997, 196608, 1, 917533, 196608, 2, 1048602, 65536, 3, 1048604, 65536, 3, 1048605, 196608, 4, 655392, 0, 1, 786464, 0, 1, 720928, 0, 1, 852000, 196608, 5, 852003, 0, 2, 852001, 131072, 2, 852004, 65536, 2, 852005, 65536, 2, 1114141, 0, 1, 1114142, 65536, 1, 1114143, 262144, 0, 1114144, 65536, 2, 1114145, 131072, 2, 1048606, 65536, 0, 1048607, 65536, 0, 1048608, 65536, 0, 1048609, 131072, 0, 655393, 131072, 1, 720929, 131072, 1, 786465, 131072, 1, 655395, 196608, 1, 720931, 196608, 1, 786467, 0, 5, 851999, 0, 3, 1179679, 131072, 1, 1245215, 131072, 1, 1245214, 65536, 1, 1310750, 65536, 2, 1245213, 0, 1, 1179677, 0, 1, 1310749, 0, 2, 1179678, 65536, 1, 1310751, 65536, 4, 1114147, 0, 2, 1048611, 0, 0, 1114148, 65536, 2, 1179685, 196608, 1, 1245221, 196608, 1, 1310757, 196608, 1, 1114149, 393216, 3, 1376287, 196608, 1, 1441823, 196608, 1, 1507359, 262144, 6, 1507363, 65536, 3, 1507362, 65536, 3, 1507361, 65536, 3, 1507360, 65536, 3, 1507364, 65536, 3, 1507365, 196608, 5, 1376293, 0, 5, 1441829, 0, 1, 1048612, 65536, 0, 1048613, 65536, 0, 655403, 131072, 1, 852011, 131072, 1, 720939, 131072, 1, 786475, 131072, 1, 589867, 131072, 1, 524331, 131072, 1, 458795, 131072, 1, 393259, 131072, 0, 852009, 327680, 0, 852010, 65536, 1, 852008, 0, 2, 852006, 131072, 2, 786470, 131072, 0, 786472, 0, 0, 786468, 65536, 0, 786469, 65536, 0, 786473, 65536, 0, 786474, 327680, 1, 589860, 65536, 3, 589861, 131072, 3, 589865, 65536, 3, 589866, 393216, 1, 393257, 65536, 3, 393258, 327680, 3, 393253, 131072, 3, 393252, 65536, 3, 589864, 0, 3, 393256, 0, 3, 458794, 0, 1, 524330, 0, 1, 655402, 0, 1, 720938, 0, 1, 327715, 196608, 1, 262179, 196608, 1, 196643, 262144, 3, 196645, 131072, 3, 196644, 65536, 3, 196648, 0, 3, 196650, 327680, 5, 196649, 65536, 3, 262186, 196608, 1, 327722, 196608, 1, 37, 131072, 3, 36, 65536, 3, 35, 262144, 5, 65571, 196608, 1, 131107, 65536, 5, 40, 0, 3, 41, 65536, 3, 42, 393216, 5, 131114, 196608, 1, 65578, 196608, 1, 1114152, 0, 2, 1114153, 327680, 0, 1179689, 0, 1, 1245225, 0, 1, 1310761, 0, 1, 1376294, 65536, 0, 1376295, 65536, 0, 1376296, 65536, 0, 1376297, 327680, 1, 1114150, 131072, 2, 1048614, 131072, 0, 1048616, 0, 0, 1048617, 327680, 1, -65494, 196608, 0, -196566, 65536, 3, -196567, 65536, 3, -196568, 65536, 3, -196569, 65536, 3, -196571, 65536, 3, -196570, 65536, 3, -196572, 65536, 3, -196573, 262144, 4, -131037, 196608, 1, -65501, 196608, 1, -196565, 65536, 3, -196562, 0, 3, -196564, 131072, 3, 196651, 65536, 3, 196652, 65536, 3, 196653, 65536, 3, 196654, 65536, 3, 196655, 65536, 3, 196656, 393216, 6, -131024, 196608, 1, -65488, 196608, 1, 48, 196608, 1, 65584, 196608, 1, 131120, 196608, 1, -196561, 327680, 6, -196560, 393216, 4, 196640, 131072, 2, 196642, 0, 2, 131104, 131072, 0, 131106, 0, 0, -65504, 131072, 2, -393183, 196608, 5, -393184, 131072, 4, -393182, 65536, 2, -131040, 131072, 1, -196576, 131072, 1, -262112, 131072, 1, -327648, 131072, 1, -458719, 0, 0, -458718, 393216, 0, -524254, 196608, 1, -589790, 196608, 1, -655326, 196608, 1, -655322, 196608, 2, -524250, 262144, 4, -458714, 65536, 5, -393181, 131072, 2, -393179, 0, 2, -393178, 262144, 3, -458717, 131072, 0, -458715, 0, 0, -720862, 262144, 4, -720859, 65536, 3, -720860, 65536, 3, -720861, 65536, 3, -720858, 393216, 5, -393177, 131072, 3, -393175, 0, 3, -393174, 196608, 5, -393173, 393216, 3, -327642, 196608, 2, -327637, 196608, 2, -393172, 65536, 2, -393171, 65536, 2, -393170, 65536, 2, -393169, 65536, 4, -327633, 196608, 1, -262097, 196608, 1, 917547, 131072, 1, 983083, 131072, 1, 1048619, 131072, 1, 1048618, 65536, 1, 917545, 0, 1, 983081, 0, 1, 917546, 65536, 1, 983082, 65536, 1, 1114154, 65536, 1, 1179690, 65536, 1, 1245226, 65536, 1, 1310762, 65536, 1, 1376298, 65536, 1, 1441834, 65536, 1, 1507366, 65536, 2, 1507368, 65536, 2, 1507367, 65536, 2, 1507369, 65536, 2, 1441830, 65536, 1, 1441832, 65536, 1, 1441831, 65536, 1, 1441833, 65536, 1, 1114155, 131072, 1, 1179691, 131072, 1, 1245227, 131072, 1, 1310763, 131072, 1, 1376299, 131072, 1, 1441835, 131072, 1, 1507371, 131072, 2, 1507370, 65536, 2, -524249, 131072, 3, -524247, 0, 3, -524246, 196608, 4, -458710, 0, 1, -786394, 196608, 1, -524245, 65536, 0, -458709, 65536, 1, -458708, 65536, 1, -458707, 65536, 1, -524244, 65536, 0, -524243, 65536, 0, -524242, 65536, 0, -458706, 65536, 1, -458705, 131072, 1, -524241, 65536, 5, -851930, 196608, 1, -786385, 393216, 4, -720849, 196608, 1, -655313, 196608, 1, -589777, 196608, 1, -982997, 196608, 1, -983002, 196608, 1, -917466, 196608, 1, -917461, 196608, 1, -851925, 196608, 1, -786389, 262144, 6, -786388, 65536, 3, -786387, 65536, 3, -786386, 65536, 3, -1048538, 196608, 1, -1114074, 262144, 4, -1114073, 65536, 3, -1114072, 65536, 3, -1114071, 65536, 3, -1114070, 65536, 3, -1114069, 393216, 4, -1048533, 196608, 1, 1179660, 196608, 1, -393207, 131072, 0, -393205, 0, 0, -393208, 262144, 1, -458744, 131072, 1, -524280, 393216, 2, -458745, 65536, 1, -393209, 65536, 1, -458740, 0, 1, -393204, 327680, 1, -393203, 65536, 1, -458739, 65536, 1, -524276, 393216, 1, -589812, 0, 1, -655348, 0, 1, -589816, 131072, 1, -655352, 131072, 1, -524281, 65536, 1, -589817, 65536, 1, -655353, 65536, 1, -524275, 65536, 1, -589811, 65536, 1, -655347, 65536, 1, -720888, 131072, 4, -720889, 262144, 1, -720884, 196608, 4, -720883, 327680, 1, -786419, 0, 0, -786418, 327680, 1, -786425, 131072, 0, -786426, 131072, 6, -786427, 0, 2, -720890, 0, 1, -589818, 0, 1, -655354, 0, 1, -524282, 0, 1, -720882, 65536, 1, -655346, 65536, 1, -589810, 65536, 1, -524274, 65536, 1, -458738, 65536, 1, -393202, 65536, 1, -327666, 65536, 1, -851962, 131072, 1, -917498, 393216, 2, -983034, 131072, 1, -1048570, 131072, 1, -1048571, 0, 1, -917499, 0, 1, -851963, 0, 1, -983035, 0, 1, -851954, 0, 1, -917490, 393216, 1, -983026, 0, 1, -983025, 131072, 1, -1048561, 131072, 1, -851953, 131072, 1, -917489, 131072, 1, -1114097, 131072, 4, -1048562, 0, 1, -1114098, 196608, 4, -786417, 262144, 1, -720881, 65536, 1, -655345, 65536, 1, -589809, 65536, 1, -524273, 65536, 1, -458737, 65536, 1, -393201, 65536, 1, -327665, 65536, 1, -1114106, 131072, 4, -1114107, 196608, 4, -1114108, 65536, 3, -1114112, 262144, 6, -1114111, 65536, 3, -1114110, 65536, 3, -1114109, 65536, 3, -1114096, 65536, 3, -1114094, 65536, 3, -1114095, 65536, 3, -1114092, 393216, 6, -1114093, 65536, 3, -2228224, 262144, 4, -2228223, 65536, 3, -2228222, 65536, 3, -2228221, 65536, 3, -2228220, 65536, 3, -2228219, 65536, 3, -2228218, 65536, 3, -2228217, 65536, 3, -2228216, 65536, 3, -2228215, 65536, 3, -2228214, 65536, 3, -2228213, 65536, 3, -2228212, 65536, 3, -2228211, 65536, 3, -2228210, 65536, 3, -2228209, 65536, 3, -2228208, 65536, 3, -2228207, 65536, 3, -2228206, 65536, 3, -2228205, 65536, 3, -2228204, 393216, 4, -720887, 131072, 3, -720885, 0, 3, -524279, 131072, 3, -524277, 0, 3, -917497, 65536, 3, -917496, 65536, 3, -917495, 131072, 3, -917493, 0, 3, -917492, 65536, 3, -917491, 65536, 3, -1114105, 65536, 3, -1114104, 65536, 3, -1114103, 131072, 3, -1114101, 0, 3, -1114100, 65536, 3, -1114099, 65536, 3, -1179628, 196608, 1, -1245164, 196608, 1, -1310700, 196608, 1, -1376236, 196608, 1, -1179648, 196608, 1, -1245184, 196608, 1, -1310720, 196608, 1, -1376256, 196608, 1, -1441792, 196608, 1, -1507328, 196608, 1, -1441772, 196608, 1, -1507308, 196608, 1, -1572844, 196608, 1, -1572864, 196608, 1, -1638400, 196608, 1, -1703936, 196608, 1, -1769472, 196608, 1, -1835008, 196608, 1, -1900544, 196608, 1, -1966080, 196608, 1, -2031616, 196608, 1, -2097152, 196608, 1, -2162688, 196608, 1, -1638380, 196608, 1, -1703916, 196608, 1, -1769452, 196608, 1, -1834988, 196608, 1, -1900524, 196608, 1, -1966060, 196608, 1, -2031596, 196608, 1, -2097132, 196608, 1, -2162668, 196608, 1)
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("2_bwrwt")]
+position = Vector2(168, 296)
+speed = 36.0
+
+[node name="DoorNormal" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(136, 152)
+
+[node name="DoorYellow" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(168, 120)
+
+[node name="Monster" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(104, 136)
+
+[node name="Monster2" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(104, 119)
+
+[node name="Monster3" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(104, 104)
+
+[node name="ItemKeyYellow" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(152, 136)
+
+[node name="ItemPotionGreen" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(136, 88)
+
+[node name="Monster4" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(248, 88)
+
+[node name="ItemKeyYellow3" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(152, -8)
+
+[node name="ItemKeyYellow4" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(152, -40)
+
+[node name="ItemKeyYellow5" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(184, -40)
+
+[node name="ItemKeyYellow6" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(184, -8)
+
+[node name="ItemPotionGreen2" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(168, -40)
+
+[node name="ItemPotionGreen3" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(152, -24)
+
+[node name="ItemPotionGreen4" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(168, -8)
+
+[node name="ItemPotionGreen5" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(184, -24)
+
+[node name="ItemKeyBlue" parent="." instance=ExtResource("8_yth3g")]
+position = Vector2(168, -24)
+
+[node name="ItemPotionGreen6" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(104, 88)
+
+[node name="DoorYellow2" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(168, 56)
+
+[node name="DoorNormal2" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(168, 184)
+
+[node name="Monster5" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(168, 216)
+
+[node name="DoorNormal3" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(168, 264)
+
+[node name="DoorNormal4" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(248, 120)
+
+[node name="ItemKeyYellow2" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(264, 72)
+
+[node name="MonsterGuardian" parent="." instance=ExtResource("7_wxe3g")]
+position = Vector2(248, 152)
+
+[node name="MonsterHeavyGuardian" parent="." instance=ExtResource("10_6hrvp")]
+position = Vector2(280, 152)
+
+[node name="DoorNormal5" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(136, 24)
+
+[node name="DoorNormal6" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(136, 40)
+
+[node name="Monster6" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(96, 32)
+
+[node name="Monster7" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(72, 32)
+
+[node name="Monster8" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(48, 32)
+
+[node name="DoorYellow3" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(72, 8)
+
+[node name="ItemPotionGreen7" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(104, -8)
+
+[node name="DoorBlue" parent="." instance=ExtResource("11_ch02i")]
+position = Vector2(72, -40)
+
+[node name="DoorYellow4" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(-8, 8)
+
+[node name="DoorYellow5" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(-72, 8)
+
+[node name="DoorYellow6" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(-8, -56)
+
+[node name="MonsterGuardian2" parent="." instance=ExtResource("7_wxe3g")]
+position = Vector2(-8, 40)
+
+[node name="Monster9" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(-24, 24)
+
+[node name="Monster10" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(8, 24)
+
+[node name="ItemPotionGreen8" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(-24, 56)
+
+[node name="ItemPotionGreen9" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(-8, 56)
+
+[node name="ItemPotionGreen10" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(-24, 40)
+
+[node name="ItemPotionGreen11" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(8, 40)
+
+[node name="ItemPotionGreen12" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(8, 56)
+
+[node name="DoorYellow7" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(-72, -40)
+
+[node name="MonsterHeavyGuardian2" parent="." instance=ExtResource("10_6hrvp")]
+position = Vector2(-8, -72)
+
+[node name="ItemPotionPurple" parent="." instance=ExtResource("12_8xpns")]
+position = Vector2(-8, -88)
+
+[node name="Monster11" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(-40, -72)
+
+[node name="Monster13" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(24, -72)
+
+[node name="Monster14" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(8, -72)
+
+[node name="Monster15" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(-24, -72)
+
+[node name="Monster16" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(-24, -88)
+
+[node name="Monster17" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(8, -88)
+
+[node name="ItemPotionGreen13" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(-72, -72)
+
+[node name="DoorYellow8" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(-104, -56)
+
+[node name="ItemPotionGreen14" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(56, -88)
+
+[node name="ItemPotionGreen16" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(88, -88)
+
+[node name="ItemPotionGreen18" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(56, -56)
+
+[node name="ItemPotionGreen20" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(88, -56)
+
+[node name="ItemPotionGreen23" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(-72, 40)
+
+[node name="Monster18" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(72, -72)
+
+[node name="ItemPotionBlue" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(-216, -72)
+
+[node name="Monster19" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(-200, -24)
+
+[node name="ItemKeyRed" parent="." instance=ExtResource("14_5au4k")]
+position = Vector2(-200, -72)
+
+[node name="DoorRed" parent="." instance=ExtResource("15_logj4")]
+position = Vector2(-152, 88)
+
+[node name="DoorYellow9" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(-104, 136)
+
+[node name="Monster20" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(-120, 136)
+
+[node name="Monster21" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(-136, 136)
+
+[node name="Monster22" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(-152, 136)
+
+[node name="Monster23" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(-136, 120)
+
+[node name="Monster24" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(-152, 120)
+
+[node name="Monster25" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(-120, 120)
+
+[node name="ItemKeyYellow7" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(-88, 56)
+
+[node name="ItemPotionGreen15" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(-40, -56)
+
+[node name="ItemPotionGreen17" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(24, -56)
+
+[node name="ItemPotionGreen19" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(-88, 88)
+
+[node name="ItemPotionGreen21" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(-56, 88)
+
+[node name="ItemPotionGreen22" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(-24, 136)
+
+[node name="ItemPotionGreen24" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(-8, 136)
+
+[node name="ItemPotionGreen25" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(8, 136)
+
+[node name="ItemPotionGreen26" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(-24, 120)
+
+[node name="ItemPotionGreen27" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(-8, 120)
+
+[node name="ItemPotionGreen28" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(8, 104)
+
+[node name="ItemPotionGreen29" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(-24, 104)
+
+[node name="ItemPotionGreen30" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(-8, 88)
+
+[node name="ItemPotionBlue2" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(-8, 104)
+
+[node name="ItemPotionBlue3" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(-24, 88)
+
+[node name="ItemPotionBlue4" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(8, 88)
+
+[node name="ItemPotionGreen31" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(8, 120)
+
+[node name="DoorNormal7" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(-8, 152)
+
+[node name="ItemPotionGreen32" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(-152, 24)
+
+[node name="ItemKeyBlue2" parent="." instance=ExtResource("8_yth3g")]
+position = Vector2(8, 168)
+
+[node name="DoorBlue3" parent="." instance=ExtResource("11_ch02i")]
+position = Vector2(-24, 216)
+
+[node name="ItemPotionGreen33" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(-8, 216)
+
+[node name="ItemPotionGreen34" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(-8, 200)
+
+[node name="ItemPotionGreen35" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(-8, 232)
+
+[node name="ItemPotionGreen36" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(8, 232)
+
+[node name="ItemPotionGreen37" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(8, 200)
+
+[node name="DoorBlue2" parent="." instance=ExtResource("11_ch02i")]
+position = Vector2(-88, 216)
+
+[node name="ItemPotionBlue5" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(-104, 216)
+
+[node name="DoorBlue4" parent="." instance=ExtResource("11_ch02i")]
+position = Vector2(24, 168)
+
+[node name="ItemPotionPurple2" parent="." instance=ExtResource("12_8xpns")]
+position = Vector2(40, 88)
+
+[node name="ItemPotionPurple3" parent="." instance=ExtResource("12_8xpns")]
+position = Vector2(40, 119)
+
+[node name="ItemPotionPurple4" parent="." instance=ExtResource("12_8xpns")]
+position = Vector2(40, 152)
+
+[node name="ItemPotionPurple5" parent="." instance=ExtResource("12_8xpns")]
+position = Vector2(56, 168)
+
+[node name="DoorNormal8" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(72, 88)
+
+[node name="Monster12" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(56, 103)
+
+[node name="DoorNormal9" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(56, 136)
+
+[node name="ItemPotionBlue6" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(344, 168)
+
+[node name="ItemPotionBlue7" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(376, 136)
+
+[node name="ItemPotionBlue8" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(344, 136)
+
+[node name="ItemPotionBlue9" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(376, 168)
+
+[node name="ItemPotionGreen38" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(360, 152)
+
+[node name="ItemPotionGreen39" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(360, 136)
+
+[node name="ItemPotionGreen40" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(344, 152)
+
+[node name="ItemPotionGreen41" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(360, 168)
+
+[node name="ItemPotionGreen42" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(376, 152)
+
+[node name="ItemKeyBlue3" parent="." instance=ExtResource("8_yth3g")]
+position = Vector2(232, 168)
+
+[node name="DoorBlue5" parent="." instance=ExtResource("11_ch02i")]
+position = Vector2(296, 184)
+
+[node name="ItemKeyYellow8" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(280, 200)
+
+[node name="ItemKeyYellow9" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(312, 200)
+
+[node name="ItemKeyYellow11" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(296, 216)
+
+[node name="ItemPotionBlue10" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(280, 232)
+
+[node name="ItemPotionBlue11" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(312, 232)
+
+[node name="DoorBlue6" parent="." instance=ExtResource("11_ch02i")]
+position = Vector2(328, 88)
+
+[node name="ItemPotionPurple6" parent="." instance=ExtResource("12_8xpns")]
+position = Vector2(344, 72)
+
+[node name="ItemPotionPurple7" parent="." instance=ExtResource("12_8xpns")]
+position = Vector2(344, 88)
+
+[node name="ItemPotionPurple8" parent="." instance=ExtResource("12_8xpns")]
+position = Vector2(344, 104)
+
+[node name="ItemPotionGreen43" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(360, 72)
+
+[node name="ItemPotionGreen44" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(360, 88)
+
+[node name="ItemPotionGreen45" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(360, 104)
+
+[node name="DoorYellow10" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(24, 264)
+
+[node name="DoorYellow11" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(216, 24)
+
+[node name="ItemPotionGreen46" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(232, 8)
+
+[node name="ItemPotionGreen47" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(232, 24)
+
+[node name="ItemPotionGreen48" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(232, 40)
+
+[node name="ItemPotionGreen49" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(248, 8)
+
+[node name="ItemPotionGreen50" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(248, 24)
+
+[node name="ItemPotionGreen51" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(248, 40)
+
+[node name="DoorYellow12" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(248, -8)
+
+[node name="ItemKeyYellow10" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(232, -40)
+
+[node name="ItemPotionGreen52" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(248, -40)
+
+[node name="ItemPotionGreen53" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(232, -24)
+
+[node name="ItemPotionGreen54" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(248, -24)
+
+[node name="DoorNormal11" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(296, 56)
+
+[node name="MonsterElite" parent="." instance=ExtResource("16_0vrpt")]
+position = Vector2(328, -49)
+
+[node name="Monster28" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(328, -80)
+
+[node name="Monster29" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(360, -81)
+
+[node name="DoorYellow13" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(392, 55)
+
+[node name="Monster26" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(296, -80)
+
+[node name="Monster27" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(296, -48)
+
+[node name="Monster30" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(360, -48)
+
+[node name="MonsterElite2" parent="." instance=ExtResource("16_0vrpt")]
+position = Vector2(80, 224)
+
+[node name="MonsterElite3" parent="." instance=ExtResource("16_0vrpt")]
+position = Vector2(80, 272)
+
+[node name="ItemPotionBlue12" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(120, 200)
+
+[node name="ItemPotionBlue13" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(120, 216)
+
+[node name="ItemPotionBlue14" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(120, 232)
+
+[node name="ItemPotionBlue15" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(120, 248)
+
+[node name="ItemPotionBlue16" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(120, 264)
+
+[node name="ItemPotionBlue17" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(120, 280)
+
+[node name="ItemPotionBlue18" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(120, 296)
+
+[node name="ItemPotionGreen55" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(104, 200)
+
+[node name="ItemPotionGreen56" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(104, 216)
+
+[node name="ItemPotionGreen57" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(104, 232)
+
+[node name="ItemPotionGreen58" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(104, 248)
+
+[node name="ItemPotionGreen59" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(104, 264)
+
+[node name="ItemPotionGreen60" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(104, 280)
+
+[node name="ItemPotionGreen61" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(104, 296)
+
+[node name="DoorYellow14" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(328, 8)
+
+[node name="DoorYellow15" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(328, -104)
+
+[node name="ItemPotionGreen62" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(360, 24)
+
+[node name="ItemPotionGreen63" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(376, 24)
+
+[node name="ItemPotionGreen64" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(344, 24)
+
+[node name="ItemPotionGreen65" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(280, 40)
+
+[node name="DoorYellow16" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(264, 24)
+
+[node name="ItemPotionPurple9" parent="." instance=ExtResource("12_8xpns")]
+position = Vector2(328, -168)
+
+[node name="ItemPotionBlue20" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(312, -168)
+
+[node name="ItemPotionBlue21" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(344, -168)
+
+[node name="ItemPotionBlue22" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(296, -168)
+
+[node name="ItemPotionBlue23" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(312, -152)
+
+[node name="ItemPotionBlue24" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(328, -136)
+
+[node name="ItemPotionBlue25" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(344, -152)
+
+[node name="ItemPotionBlue26" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(360, -168)
+
+[node name="ItemPotionGreen66" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(280, -168)
+
+[node name="ItemPotionGreen67" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(280, -152)
+
+[node name="ItemPotionGreen68" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(296, -152)
+
+[node name="ItemPotionGreen69" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(280, -136)
+
+[node name="ItemPotionGreen70" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(296, -136)
+
+[node name="ItemPotionGreen71" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(312, -136)
+
+[node name="ItemPotionGreen72" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(344, -136)
+
+[node name="ItemPotionGreen74" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(360, -152)
+
+[node name="ItemPotionGreen75" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(376, -168)
+
+[node name="ItemPotionGreen76" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(376, -152)
+
+[node name="ItemPotionGreen77" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(376, -136)
+
+[node name="ItemPotionGreen78" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(280, -120)
+
+[node name="ItemPotionGreen79" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(296, -120)
+
+[node name="ItemPotionGreen80" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(312, -120)
+
+[node name="ItemPotionGreen81" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(328, -120)
+
+[node name="ItemPotionGreen82" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(344, -120)
+
+[node name="ItemPotionGreen83" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(360, -120)
+
+[node name="ItemPotionGreen84" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(376, -120)
+
+[node name="ItemPotionPurple10" parent="." instance=ExtResource("12_8xpns")]
+position = Vector2(328, -152)
+
+[node name="ItemKeyYellow12" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(40, 168)
+
+[node name="ItemKeyYellow13" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(56, 152)
+
+[node name="ItemKeyRed2" parent="." instance=ExtResource("14_5au4k")]
+position = Vector2(88, 200)
+
+[node name="DoorNormal10" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(168, 328)
+
+[node name="DoorNormal12" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(168, 344)
+
+[node name="DoorNormal13" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(168, 360)
+
+[node name="MonsterElite4" parent="." instance=ExtResource("16_0vrpt")]
+position = Vector2(168, 392)
+
+[node name="ItemKeyYellow14" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(152, 440)
+
+[node name="ItemKeyYellow15" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(184, 440)
+
+[node name="ItemPotionBlue19" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(168, 440)
+
+[node name="ItemKeyRed3" parent="." instance=ExtResource("14_5au4k")]
+position = Vector2(360, -136)
+
+[node name="ItemPotionBlue27" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(424, 120)
+
+[node name="ItemPotionPurple11" parent="." instance=ExtResource("12_8xpns")]
+position = Vector2(424, 136)
+
+[node name="DoorBlue7" parent="." instance=ExtResource("11_ch02i")]
+position = Vector2(424, 104)
+
+[node name="DoorNormal14" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(472, 56)
+
+[node name="Monster31" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(464, 16)
+
+[node name="Monster32" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(480, 32)
+
+[node name="ItemKeyYellow16" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(488, 8)
+
+[node name="MonsterHeavyGuardian3" parent="." instance=ExtResource("10_6hrvp")]
+position = Vector2(472, -40)
+
+[node name="ItemKeyYellow17" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(456, 40)
+
+[node name="ItemPotionGreen73" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(440, -72)
+
+[node name="ItemPotionGreen85" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(456, -72)
+
+[node name="ItemKeyBlue4" parent="." instance=ExtResource("8_yth3g")]
+position = Vector2(472, -72)
+
+[node name="ItemPotionBlue28" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(488, -72)
+
+[node name="DoorNormal15" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(472, -24)
+
+[node name="DoorYellow17" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(504, 24)
+
+[node name="DoorYellow18" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(488, 120)
+
+[node name="DoorYellow19" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(488, 104)
+
+[node name="Monster33" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(520, 136)
+
+[node name="ItemKeyYellow18" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(536, 120)
+
+[node name="ItemKeyYellow19" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(552, 120)
+
+[node name="ItemKeyYellow20" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(536, 136)
+
+[node name="ItemKeyYellow21" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(552, 136)
+
+[node name="DoorYellow20" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(488, 152)
+
+[node name="MonsterGuardian3" parent="." instance=ExtResource("7_wxe3g")]
+position = Vector2(424, 184)
+
+[node name="MonsterGuardian4" parent="." instance=ExtResource("7_wxe3g")]
+position = Vector2(440, 216)
+
+[node name="Monster34" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(408, 208)
+
+[node name="Monster35" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(448, 192)
+
+[node name="Monster36" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(416, 232)
+
+[node name="DoorNormal16" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(472, 248)
+
+[node name="ItemPotionGreen86" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(504, 168)
+
+[node name="ItemPotionGreen87" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(504, 184)
+
+[node name="ItemPotionGreen88" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(504, 200)
+
+[node name="ItemKeyYellow22" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(488, 200)
+
+[node name="DoorYellow21" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(488, 216)
+
+[node name="DoorYellow22" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(552, 280)
+
+[node name="ItemKeyYellow23" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(520, 296)
+
+[node name="ItemKeyYellow24" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(584, 296)
+
+[node name="Monster37" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(536, 312)
+
+[node name="Monster38" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(568, 312)
+
+[node name="MonsterHeavyGuardian4" parent="." instance=ExtResource("10_6hrvp")]
+position = Vector2(552, 296)
+
+[node name="Monster39" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(520, 328)
+
+[node name="Monster40" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(584, 328)
+
+[node name="ItemPotionGreen89" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(520, 360)
+
+[node name="ItemPotionGreen90" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(536, 360)
+
+[node name="ItemPotionGreen91" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(552, 360)
+
+[node name="ItemPotionGreen92" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(568, 360)
+
+[node name="ItemPotionGreen93" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(584, 360)
+
+[node name="DoorYellow23" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(552, 200)
+
+[node name="ItemPotionBlue29" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(552, 168)
+
+[node name="ItemPotionBlue30" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(552, 184)
+
+[node name="DoorYellow24" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(632, 200)
+
+[node name="DoorYellow25" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(632, 280)
+
+[node name="ItemKeyYellow25" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(632, 328)
+
+[node name="ItemPotionGreen94" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(616, 328)
+
+[node name="ItemPotionGreen95" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(632, 312)
+
+[node name="ItemPotionGreen96" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(616, 312)
+
+[node name="ItemPotionGreen97" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(616, 296)
+
+[node name="ItemPotionGreen98" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(648, 296)
+
+[node name="ItemPotionGreen99" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(648, 312)
+
+[node name="ItemPotionGreen100" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(648, 328)
+
+[node name="MonsterElite5" parent="." instance=ExtResource("16_0vrpt")]
+position = Vector2(592, 176)
+
+[node name="MonsterGuardian5" parent="." instance=ExtResource("7_wxe3g")]
+position = Vector2(656, 176)
+
+[node name="MonsterGuardian6" parent="." instance=ExtResource("7_wxe3g")]
+position = Vector2(592, 128)
+
+[node name="MonsterElite6" parent="." instance=ExtResource("16_0vrpt")]
+position = Vector2(656, 128)
+
+[node name="MonsterElite7" parent="." instance=ExtResource("16_0vrpt")]
+position = Vector2(592, 80)
+
+[node name="MonsterGuardian7" parent="." instance=ExtResource("7_wxe3g")]
+position = Vector2(656, 80)
+
+[node name="MonsterGuardian8" parent="." instance=ExtResource("7_wxe3g")]
+position = Vector2(592, 32)
+
+[node name="MonsterElite8" parent="." instance=ExtResource("16_0vrpt")]
+position = Vector2(656, 32)
+
+[node name="MonsterHeavyGuardian5" parent="." instance=ExtResource("10_6hrvp")]
+position = Vector2(616, 8)
+
+[node name="MonsterHeavyGuardian6" parent="." instance=ExtResource("10_6hrvp")]
+position = Vector2(632, 8)
+
+[node name="ItemPotionBlue31" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(584, -24)
+
+[node name="ItemPotionBlue32" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(664, -24)
+
+[node name="ItemPotionGreen101" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(584, -8)
+
+[node name="ItemPotionGreen102" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(664, -8)
+
+[node name="ItemPotionGreen103" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(600, -24)
+
+[node name="ItemPotionGreen104" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(648, -24)
+
+[node name="ItemPotionBlue33" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(600, -8)
+
+[node name="ItemPotionBlue34" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(648, -8)
+
+[node name="ItemKeyYellow26" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(616, -24)
+
+[node name="ItemKeyYellow27" parent="." instance=ExtResource("4_beuip")]
+position = Vector2(632, -24)
+
+[node name="ItemPotionGreen105" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(616, -8)
+
+[node name="ItemPotionGreen106" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(632, -8)
+
+[node name="DoorNormal17" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(456, 104)
+
+[node name="DoorNormal18" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(456, 152)
+
+[node name="ItemPotionGreen107" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(456, 120)
+
+[node name="ItemPotionGreen108" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(456, 136)
+
+[node name="ItemKeyRed4" parent="." instance=ExtResource("14_5au4k")]
+position = Vector2(728, 8)
+
+[node name="DoorYellow26" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(680, -24)
+
+[node name="DoorBlue8" parent="." instance=ExtResource("11_ch02i")]
+position = Vector2(728, -40)
+
+[node name="ItemPotionPurple12" parent="." instance=ExtResource("12_8xpns")]
+position = Vector2(712, -8)
+
+[node name="ItemPotionPurple14" parent="." instance=ExtResource("12_8xpns")]
+position = Vector2(712, 24)
+
+[node name="ItemPotionPurple17" parent="." instance=ExtResource("12_8xpns")]
+position = Vector2(744, -8)
+
+[node name="ItemPotionPurple19" parent="." instance=ExtResource("12_8xpns")]
+position = Vector2(744, 24)
+
+[node name="ItemPotionBlue35" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(696, 40)
+
+[node name="ItemPotionBlue36" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(696, -24)
+
+[node name="ItemPotionBlue37" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(760, -24)
+
+[node name="ItemPotionBlue38" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(760, 40)
+
+[node name="ItemPotionGreen109" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(696, -8)
+
+[node name="ItemPotionGreen110" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(696, 8)
+
+[node name="ItemPotionGreen111" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(696, 24)
+
+[node name="ItemPotionGreen112" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(712, 40)
+
+[node name="ItemPotionGreen113" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(728, 40)
+
+[node name="ItemPotionGreen114" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(744, 40)
+
+[node name="ItemPotionGreen115" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(712, -24)
+
+[node name="ItemPotionGreen116" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(728, -24)
+
+[node name="ItemPotionGreen117" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(744, -24)
+
+[node name="ItemPotionGreen118" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(760, -8)
+
+[node name="ItemPotionGreen119" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(760, 8)
+
+[node name="ItemPotionGreen120" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(760, 24)
+
+[node name="MonsterHeavyGuardian7" parent="." instance=ExtResource("10_6hrvp")]
+position = Vector2(536, 56)
+
+[node name="DoorYellow27" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(536, 40)
+
+[node name="ItemKeyBlue5" parent="." instance=ExtResource("8_yth3g")]
+position = Vector2(552, 88)
+
+[node name="ItemPotionBlue39" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(520, 88)
+
+[node name="MonsterGuardian9" parent="." instance=ExtResource("7_wxe3g")]
+position = Vector2(584, -136)
+
+[node name="DoorRed2" parent="." instance=ExtResource("15_logj4")]
+position = Vector2(696, -56)
+
+[node name="DoorYellow28" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(648, -88)
+
+[node name="ItemPotionBlue40" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(632, -104)
+
+[node name="ItemPotionBlue41" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(664, -104)
+
+[node name="ItemPotionGreen121" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(648, -104)
+
+[node name="DoorYellow29" parent="." instance=ExtResource("3_2pj8j")]
+position = Vector2(648, -120)
+
+[node name="DoorBlue9" parent="." instance=ExtResource("11_ch02i")]
+position = Vector2(616, -136)
+
+[node name="ItemKeyRed5" parent="." instance=ExtResource("14_5au4k")]
+position = Vector2(744, -168)
+
+[node name="MonsterElite9" parent="." instance=ExtResource("16_0vrpt")]
+position = Vector2(660, -160)
+
+[node name="MonsterElite10" parent="." instance=ExtResource("16_0vrpt")]
+position = Vector2(688, -144)
+
+[node name="MonsterElite11" parent="." instance=ExtResource("16_0vrpt")]
+position = Vector2(704, -168)
+
+[node name="Monster41" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(684, -160)
+
+[node name="Monster42" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(664, -144)
+
+[node name="Monster43" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(712, -144)
+
+[node name="ItemPotionPurple20" parent="." instance=ExtResource("12_8xpns")]
+position = Vector2(568, -152)
+
+[node name="MonsterHeavyGuardian8" parent="." instance=ExtResource("10_6hrvp")]
+position = Vector2(616, -56)
+
+[node name="DoorRed3" parent="." instance=ExtResource("15_logj4")]
+position = Vector2(168, -56)
+
+[node name="DoorRed4" parent="." instance=ExtResource("15_logj4")]
+position = Vector2(168, -72)
+
+[node name="DoorRed5" parent="." instance=ExtResource("15_logj4")]
+position = Vector2(168, -88)
+
+[node name="DoorNormal19" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(168, -168)
+
+[node name="ItemPotionGreen122" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(152, -136)
+count = 30
+
+[node name="ItemPotionGreen123" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(184, -136)
+count = 30
+
+[node name="DoorNormal20" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(168, -120)
+
+[node name="ItemPotionGreen124" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(152, -104)
+count = 30
+
+[node name="ItemPotionGreen125" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(184, -104)
+count = 30
+
+[node name="ItemPotionGreen126" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(136, -184)
+count = 30
+
+[node name="ItemPotionGreen127" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(136, -200)
+count = 30
+
+[node name="ItemPotionGreen128" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(152, -200)
+count = 30
+
+[node name="ItemPotionGreen129" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(152, -184)
+count = 30
+
+[node name="ItemPotionGreen130" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(184, -200)
+count = 30
+
+[node name="ItemPotionGreen131" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(184, -184)
+count = 30
+
+[node name="ItemPotionGreen132" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(200, -200)
+count = 30
+
+[node name="ItemPotionGreen133" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(200, -184)
+count = 30
+
+[node name="DoorNormal21" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(168, -216)
+
+[node name="ItemPotionPurple23" parent="." instance=ExtResource("12_8xpns")]
+position = Vector2(120, -232)
+
+[node name="ItemPotionPurple24" parent="." instance=ExtResource("12_8xpns")]
+position = Vector2(120, -248)
+
+[node name="ItemPotionBlue45" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(136, -232)
+count = 2
+
+[node name="ItemPotionBlue46" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(152, -232)
+count = 2
+
+[node name="ItemPotionBlue47" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(152, -248)
+count = 2
+
+[node name="ItemPotionPurple25" parent="." instance=ExtResource("12_8xpns")]
+position = Vector2(216, -248)
+
+[node name="ItemPotionPurple26" parent="." instance=ExtResource("12_8xpns")]
+position = Vector2(216, -232)
+
+[node name="ItemPotionBlue48" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(200, -248)
+count = 2
+
+[node name="ItemPotionBlue49" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(200, -232)
+count = 2
+
+[node name="ItemPotionBlue50" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(184, -232)
+count = 2
+
+[node name="ItemPotionBlue51" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(184, -248)
+count = 2
+
+[node name="DoorNormal22" parent="." instance=ExtResource("3_cdhss")]
+position = Vector2(168, -264)
+
+[node name="ItemPotionBlue44" parent="." instance=ExtResource("6_74v4o")]
+position = Vector2(136, -248)
+count = 2
+
+[node name="FinalRoot" type="Node2D" parent="." groups=["FinalRoot"]]
+metadata/_edit_lock_ = true
+
+[node name="MonsterBoss" parent="FinalRoot" instance=ExtResource("17_4dy5w")]
+position = Vector2(128, -480)
+
+[node name="MonsterBoss2" parent="FinalRoot" instance=ExtResource("17_4dy5w")]
+position = Vector2(176, -480)
+
+[node name="MonsterElite12" parent="." instance=ExtResource("16_0vrpt")]
+position = Vector2(112, -376)
+
+[node name="MonsterElite13" parent="." instance=ExtResource("16_0vrpt")]
+position = Vector2(144, -376)
+
+[node name="MonsterElite14" parent="." instance=ExtResource("16_0vrpt")]
+position = Vector2(176, -376)
+
+[node name="MonsterElite15" parent="." instance=ExtResource("16_0vrpt")]
+position = Vector2(208, -376)
+
+[node name="MonsterGuardian10" parent="." instance=ExtResource("7_wxe3g")]
+position = Vector2(104, -480)
+
+[node name="MonsterGuardian11" parent="." instance=ExtResource("7_wxe3g")]
+position = Vector2(200, -480)
+
+[node name="MonsterGuardian12" parent="." instance=ExtResource("7_wxe3g")]
+position = Vector2(140, -496)
+
+[node name="MonsterGuardian13" parent="." instance=ExtResource("7_wxe3g")]
+position = Vector2(164, -496)
+
+[node name="MonsterGuardian14" parent="." instance=ExtResource("7_wxe3g")]
+position = Vector2(136, -464)
+
+[node name="MonsterGuardian15" parent="." instance=ExtResource("7_wxe3g")]
+position = Vector2(168, -464)
+
+[node name="MonsterHeavyGuardian9" parent="." instance=ExtResource("10_6hrvp")]
+position = Vector2(152, -472)
+
+[node name="MonsterHeavyGuardian10" parent="." instance=ExtResource("10_6hrvp")]
+position = Vector2(188, -464)
+
+[node name="MonsterHeavyGuardian11" parent="." instance=ExtResource("10_6hrvp")]
+position = Vector2(116, -464)
+
+[node name="MonsterHeavyGuardian12" parent="." instance=ExtResource("10_6hrvp")]
+position = Vector2(120, -496)
+
+[node name="MonsterHeavyGuardian13" parent="." instance=ExtResource("10_6hrvp")]
+position = Vector2(184, -496)
+
+[node name="Monster44" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(80, -400)
+
+[node name="Monster45" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(120, -400)
+
+[node name="Monster46" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(168, -400)
+
+[node name="Monster47" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(200, -400)
+
+[node name="Monster48" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(240, -400)
+
+[node name="Monster49" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(144, -400)
+
+[node name="Monster50" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(80, -376)
+
+[node name="Monster51" parent="." instance=ExtResource("6_seybe")]
+position = Vector2(240, -376)
+
+[node name="ItemPotionGreen134" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(120, -200)
+count = 30
+
+[node name="ItemPotionGreen135" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(216, -200)
+count = 30
+
+[node name="ItemPotionGreen136" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(152, -152)
+count = 30
+
+[node name="ItemPotionGreen137" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(184, -152)
+count = 30
+
+[node name="ItemPotionGreen138" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(168, -136)
+count = 30
+
+[node name="ItemPotionGreen139" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(168, -152)
+count = 30
+
+[node name="ItemPotionGreen140" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(168, -184)
+count = 30
+
+[node name="ItemPotionGreen141" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(168, -200)
+count = 30
+
+[node name="ItemPotionGreen142" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(728, -8)
+
+[node name="ItemPotionGreen143" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(712, 7)
+
+[node name="ItemPotionGreen144" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(728, 23)
+
+[node name="ItemPotionGreen145" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(744, 8)
+
+[node name="ItemPotionGreen146" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(152, 280)
+
+[node name="ItemPotionGreen147" parent="." instance=ExtResource("5_xy0gn")]
+position = Vector2(184, 280)

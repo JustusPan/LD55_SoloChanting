@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://e85ibpl0d343"]
+
+[ext_resource type="PackedScene" uid="uid://b1mgd2mtwfqwi" path="res://abstract_door.tscn" id="1_3ms4r"]
+
+[node name="DoorBlue" instance=ExtResource("1_3ms4r")]
+door_type = 2
+
+[node name="Sprite2D" parent="." index="1"]
+frame = 3

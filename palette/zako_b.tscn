@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://ceb0dol22kmsp"]
+
+[ext_resource type="PackedScene" uid="uid://btfyawnqh2dhh" path="res://zako.tscn" id="1_un16c"]
+[ext_resource type="PackedScene" uid="uid://bdlxehxnplj15" path="res://static_assets/zako_b_explosion.tscn" id="2_xs4at"]
+[ext_resource type="Texture2D" uid="uid://b86lmjilemr1e" path="res://static_assets/props.png" id="3_gdc65"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_alhtk"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6ht55"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1brg5"]
+radius = 24.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbvtm"]
+atlas = ExtResource("3_gdc65")
+region = Rect2(64, 16, 32, 16)
+
+[node name="ZakoB" groups=["ZakoB"] instance=ExtResource("1_un16c")]
+collision_layer = 131072
+debug_name = "ZakoB"
+type = 1
+max_health = 800
+speed = 0.0
+damage = 3
+death_vfx = ExtResource("2_xs4at")
+draw_radius = 48.0
+draw_color = Color(0.231373, 0.623529, 0.905882, 1)
+enable_draw_hint = true
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_alhtk")
+
+[node name="CollisionShape2D" parent="AtkBox" index="0"]
+shape = SubResource("CircleShape2D_6ht55")
+
+[node name="CollisionShape2D" parent="TargetDetector" index="0"]
+shape = SubResource("CircleShape2D_1brg5")
+
+[node name="Sprite2D" parent="." index="4"]
+self_modulate = Color(0.231373, 0.623529, 0.905882, 1)
+texture = SubResource("AtlasTexture_fbvtm")
+
+[node name="CloseBodyDetector" parent="." index="5"]
+monitoring = false
+monitorable = false
